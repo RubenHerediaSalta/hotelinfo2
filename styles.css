@@ -1,0 +1,331 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f5f0; /* Beige claro */
+  color: #544837; /* Tono beige oscuro para el texto */
+  line-height: 1.6;
+}
+
+.hero {
+  background-image: url("p1.jpg"); /* Reemplaza con la ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Overlay oscuro para mejorar la legibilidad del texto */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #a0855b; /* Tono beige más oscuro para el botón */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #776342;
+}
+
+.cta-button i {
+  margin-right: 10px;
+}
+
+.cafayate-tourism,
+.why-invest,
+.gallery,
+.details,
+.location {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cafayate-tourism h2,
+.why-invest h2,
+.gallery h2,
+.details h2,
+.location h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #a0855b;
+}
+
+.cafayate-tourism p,
+.details p,
+.location p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+
+.cafayate-tourism ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.cafayate-tourism ul li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.cafayate-tourism ul li::before {
+  content: "\f00c"; /* Icono de check sólido de Font Awesome 6 */
+  font-family: "Font Awesome 6 Free"; /* Cambia a 'Free' para los iconos sólidos */
+  font-weight: 900; /* Para asegurar que se muestre como sólido */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #a0855b;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.benefit {
+  background-color: #fdf7ee; /* Beige muy claro para las tarjetas */
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.benefit h3 {
+  margin-top: 0;
+  color: #776342;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  background-color: #f8f5f0;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location {
+  background-color: #fdf7ee;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366; /* Verde de WhatsApp */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-float i {
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #544837;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-radius: 8px 8px 0 0;
+  margin-top: 20px;
+}
+
+/* Estilos para hacerlo responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* ... estilos previos ... */
+
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f5f0;
+}
+
+.gallery h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #a0855b;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Imágenes más pequeñas */
+  gap: 10px; /* Espacio entre imágenes reducido */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer; /* Indica que se puede hacer clic */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05); /* Pequeña animación al pasar el ratón */
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+/* Estilos responsive para la galería */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+  }
+}
